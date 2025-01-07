@@ -1,0 +1,17 @@
+#Dean.k| 1/7/2025 | start 2:34 | end 2:56
+
+lines = int(input("How many lines did you clear?: "))
+if lines < 100:
+    print("Novice")
+elif lines < 200:
+    print("Intermediate")
+elif lines < 300:
+    print("Advanced")
+else:
+    print("Expert")
+
+for i in range(2, 80, 10):
+    print(i, end = " ")
+
+for i in range(100, 10, -5):
+    print(i, end = " ")

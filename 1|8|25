@@ -1,0 +1,18 @@
+#Dean.k|1/8/25|start 1:18|end 1:44
+num = 50
+while num>0:
+    print(num, end = " ")
+    num -= 5
+
+
+userInput = "thingy"
+while userInput != "I REMEBER":
+    userInput = input("DO YOU REMEBER")
+
+
+ore = ["iron", "gold", "coal"]
+print(ore)
+ore.append("dimond")
+print(ore)
+ore.remove("gold")
+print(ore)

@@ -1,0 +1,23 @@
+#Dean.k|1/13/25|start 1:50|end 2:18
+
+def CicleCircumference (r):
+    return 2*3.14*r
+
+def isEven (num):
+    if num%2==0:
+        return "true"
+    else:
+        return "false"
+
+def frog (num):
+    for i in range(num, 0, -1):
+        print("ribbit", end=" ")
+        
+result = CicleCircumference(6)
+print("Circumference is ", result)
+
+print(isEven (8))
+print(isEven (3))
+
+print(frog (10))
+print(frog (3))

@@ -1,0 +1,22 @@
+#Dean.K|1/21/25|start 1:50|end 2:15
+def volumecylinder (r, h):
+    return 3.14*r*r*h
+
+def kilometerstomiles (k):
+    return k/1.609
+
+def grade (g):
+    if g >= 90:
+        print("A")
+    elif g >= 80:
+        print("B")
+    elif g >= 70:
+        print("C")
+    elif g >= 60:
+        print("D")
+    else:
+        print("F")
+
+print(volumecylinder (6, 8))
+print(kilometerstomiles (5))
+print(grade (92))

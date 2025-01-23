@@ -1,0 +1,24 @@
+#Dean.k|1/23/25|start 1:35|end 2:15
+def surfaceofsphere (r):
+    return 4*3.14*r*r
+
+def changechecker (m):
+    if m%5 == 0:
+        print("no pennies needed")
+    else:
+        print("you'll need pennies for this")
+
+def primeNum (num):
+    prime = True
+    for i in range(2, num):
+        if num % i == 0:
+            prime = False
+    if prime == False:
+        return "not prime"
+    else:
+        return "prime"
+
+print(surfaceofsphere (4))
+changechecker (25)
+changechecker (17)
+print(primeNum (7))

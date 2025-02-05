@@ -1,0 +1,38 @@
+#Dean.k and Keith.M-O|
+letters = ["M", "a", "r", "i", "o"]
+
+print()
+print("unicode numderr for", letters)
+for i in letters:
+    print(ord(i), end=" ")
+
+
+symbols = [0x1f60A, 0x1f601, 0x1f44D, 0x1F389, 0x1f340, 0x1F400]
+
+print()
+print("unicode symbols for", symbols)
+for j in symbols:
+    print(chr(j), end=" ")
+    
+#======================================================
+current_hour = int(input("enter the current hour (1-12): "))
+
+hours_to_add = int(input("how many hours do you want to add? "))
+
+new_hour = ((current_hour - 1 + hours_to_add) % 24) + 1
+
+print("In", hours_to_add, "hours, the time will be", new_hour, ":00.")
+#=======================================================
+
+message = input("what do you want to encrypt ")
+
+shift = int(input("Number of shift"))
+
+encrypted_message = []
+
+for k in message:
+    shifted = (ord(k) - ord('A') + shift) % 26
+    
+    encrypted_message += chr(shifted + ord('A'))
+
+print("the message is encypted:", encrypted_message)

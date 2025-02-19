@@ -1,0 +1,30 @@
+# Dean.k and JoVaun.V|2/19/25
+def mult_table(num):
+    for i in range(11):
+        print(num * i)
+
+def battery_check (battery):
+    if battery == 100:
+        print ("battery is full")
+    elif battery >= 50:
+        print ("battery ok")
+    elif battery < 50:
+        print ("battery low, please charge")
+        
+def vowels(word):
+    for i in word:
+        if i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u':
+            print ('*')
+        else:
+            print(i)
+
+def pizza (diameter, price):
+    radius = diameter/2
+    return 3.14 * radius**2 / price
+    
+        
+        
+mult_table(5)
+battery_check (77)
+vowels("dean")
+print (pizza(5, 10))

@@ -1,0 +1,55 @@
+#Dean.k and Abi|2\26\25
+import random
+def validate_password(password):
+    length = 0
+    if any(c.isupper() for c in password):
+        print("The string contains an uppercase letter.")
+    else:
+        print("The string does not contain any uppercase letters.")
+    for i in password:
+        if i == "0" or i == "1" or i == "2" or i == "3":
+            print("the password has a number")
+    for i in password:
+        length += 1
+    if length >= 8:
+        print("password is 8 chacters or bigger")
+    else:
+        print("password is not 8")
+        
+validate_password("Password123")
+
+
+#------------------------------------------------------------------------------------
+
+def GuessNum():
+    num = random.randrange(1, 100)
+    guess = 0
+    difference = 0
+    guess = int(input("Guess a number between 1-100"))
+    if guess < 1:
+        print("Too low")
+    elif guess > 100:
+        print("Too high")
+    elif guess != num:
+        difference = guess - num
+        if difference > 0:
+            print("Too low")
+        elif difference < 0:
+            print("Too high")
+    elif guess == 1:
+        print("You won!")
+GuessNum()
+
+#------------------------------------------------------------------------------------
+#alredy did this 1/23/25
+def primeNum (num):
+    prime = True
+    for i in range(2, num):
+        if num % i == 0:
+            prime = False
+    if prime == False:
+        return "not prime"
+    else:
+        return "prime"
+    
+print(primeNum (3))

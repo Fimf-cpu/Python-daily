@@ -1,0 +1,31 @@
+#Dean.k | 3/4/25
+#works with numbers and list 
+import numpy as np
+#graphs and pictures
+import matplotlib.pyplot as plt
+#open and use space picture files called FITS
+from astropy.io import fits
+#get things from the internet
+from astropy.utils.data import download_file
+#clearer pics
+from astropy.visualization import LogStretch, PowerStretch
+#showing up on graphs
+from astropy.visualization.mpl_normalize import ImageNormalize
+
+image_file = download_file('https://chandra.harvard.edu/photo/2008/m87/fits/m87_broadband.fits', cache = True)
+
+image_data = fits.getdata(image_file)
+
+import pprint
+header = fits.getheader(image_file)
+pprint.pprint(header)
+
+print('Min:', np.min(image_data))
+print('Max:', np.max(image_data))
+print('Mean:', np.mean(image_data))
+print('Stdev:', np.std(image_data))
+
+plt.figure(figsize=(10,10))
+plt.imshow(image_data, cmap='prism')
+plt.colorbar()
+plt.show()

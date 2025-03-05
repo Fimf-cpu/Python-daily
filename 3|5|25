@@ -1,0 +1,28 @@
+#dean.k|3/5/25
+
+class BankAccount:
+    def __init__(self, name, account_number, initial_balance):
+        self.name = "name"
+        self.account_number = account_number
+        self.initial_balance = initial_balance
+        
+    def withdraw(self, amount):
+        if amount <= self.initial_balance:
+            self.initial_balance -= amount 
+            print("withdraw succesfull, new balance",self.initial_balance)
+        else:
+            print("overdraft")
+    
+    def deposit(self, amount):
+        self.initial_balance += amount 
+        print("deposit succesfull, new balance",self.initial_balance)
+        
+    def get_balance(self):
+        print("balance", self.initial_balance)
+        
+
+Ac1 = BankAccount("john", 17, 5000)
+Ac1.get_balance()
+Ac1.deposit(500)
+Ac1.withdraw(500)
+Ac1.withdraw(5500)

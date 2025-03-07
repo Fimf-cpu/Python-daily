@@ -1,0 +1,23 @@
+#Dean.k|3/7/25
+def circumference (r):
+    return 2 * 3.14 * r
+
+def zigzag (n):
+    for i in range (n):
+        print(i)
+    
+    for j in range (n, 0, -1):
+        print(j-1)
+
+def threeand5 (s):
+    sum = 0
+    for k in range (s):
+        if k % 3 == 0 or k % 5 == 0:
+            sum += k
+    return sum
+
+print(circumference (5))
+zigzag (5)
+print(threeand5 (15))
+print(threeand5 (30))
+print(threeand5 (5))

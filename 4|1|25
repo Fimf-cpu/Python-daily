@@ -1,0 +1,68 @@
+import pygame
+import math
+
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Spring Scene")
+
+clock = pygame.time.Clock()
+running = True
+
+def flower(x, y): 
+    pygame.draw.line(screen, (0, 100, 0), (x + 10, y + 10), (x + 10, y + 50), 3)
+    pygame.draw.circle(screen, (255, 105, 180), (x, y), 10)
+    pygame.draw.circle(screen, (255, 105, 180), (x + 20 , y), 10)
+    pygame.draw.circle(screen, (255, 105, 180), (x + 10, y - 10), 10)
+    pygame.draw.circle(screen, (255, 105, 180), (x + 10, y + 10), 10)
+    pygame.draw.circle(screen, (255, 255, 0), (x + 10, y), 8)
+
+def bee(x, y):
+    pygame.draw.ellipse(screen, (255, 215, 0), (x, y, 30, 20))
+    pygame.draw.line(screen, (0, 0, 0), (x + 5, y), (x + 5, y + 20), 2)
+    pygame.draw.line(screen, (0, 0, 0), (x + 15, y), (x + 15, y + 20), 2)
+    pygame.draw.ellipse(screen, (255, 255, 255), (x + 5, y - 10, 10, 15))
+    pygame.draw.ellipse(screen, (255, 255, 255), (x + 15, y - 10, 10, 15))
+    
+ 
+
+while running:
+    clock.tick(60)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    # Sky
+    screen.fill((135, 206, 235))
+
+    # Grass
+    pygame.draw.rect(screen, (60, 179, 113), (0, 400, 800, 200))
+
+    # Sun
+    pygame.draw.circle(screen, (255, 223, 0), (700, 100), 50)
+
+    # Rainbow 
+    pygame.draw.arc(screen, (255, 0, 0), (200, 200, 400, 400), 0, math.pi, 10)
+    pygame.draw.arc(screen, (255, 127, 0), (210, 210, 380, 380), 0, math.pi, 10)
+    pygame.draw.arc(screen, (255, 255, 0), (220, 220, 360, 360), 0, math.pi, 10)
+    pygame.draw.arc(screen, (0, 255, 0), (230, 230, 340, 340), 0, math.pi, 10)
+    pygame.draw.arc(screen, (0, 0, 255), (240, 240, 320, 320), 0, math.pi, 10)
+    pygame.draw.arc(screen, (100, 0, 100), (250, 250, 300, 300), 0, math.pi, 10)
+    pygame.draw.arc(screen, (150, 0, 200), (260, 260, 280, 280), 0, math.pi, 10)
+
+
+    # Flower 1
+    flower (90, 450)
+    flower (120, 500)
+    flower (320, 490)
+    flower (220, 400)
+
+    # Bee 1
+    bee (150, 200)
+    bee (280, 100)
+    bee (350, 250)
+
+
+    pygame.display.flip()
+
+
+
+pygame.quit()
